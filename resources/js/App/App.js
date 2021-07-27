@@ -1,15 +1,24 @@
 import React from 'react';
 import {BrowserRouter as Router, Route,} from 'react-router-dom';
-import Example from '../Pages/Example';
+import Header from '../Main components/Header/View/Header';
+import Home from '../Pages/Home/View/Home';
+import './App.scss';
 
 function App() {
     return (
         <>
-            <Router>
-                <Route exact path="/">
-                    <Example />
-                </Route>
-            </Router>   
+            
+                <Router>
+                    <div className="header-block">
+                        <Header />
+                        </div>
+                    <div className="body-block">
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    </div> 
+                </Router>
+            
         </>
     )
 }
